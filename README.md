@@ -66,7 +66,7 @@ Mahasiswa
 
 - Tambah Mahasiswa (POST)
     
-    Endpoint: http://localhost:8080/phonebook
+    Endpoint: http://localhost:8080/mahasiswa
 
     Request body:
 
@@ -77,8 +77,8 @@ Mahasiswa
 
 - Get List Mahasiswa (GET)
 
-    Endpoint: http://localhost:8080/phonebook
+    Endpoint: http://localhost:8080/mahasiswa
 
 - Get Mahasiswa Per id (GET)
 
-    Endpoint: http://localhost:8080/phonebook/1
+    Endpoint: http://localhost:8080/mahasiswa/1
