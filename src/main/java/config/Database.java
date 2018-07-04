@@ -13,9 +13,9 @@ public class Database {
         try {
             String host = "127.0.0.1";
             String port = ":3306";
-            String dbName = "jtest";
-            String dbUser = "root";
-            String dbPass = "olid";
+            String dbName = "namaDatabase";
+            String dbUser = "userLoginMySQL";
+            String dbPass = "passLoginMySQL";
 
             Class.forName("com.mysql.jdbc.Driver");
             return DriverManager.getConnection(
