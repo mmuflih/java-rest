@@ -40,8 +40,8 @@ public class PhonebookController {
         return listUsecase.getList();
     }
 
-    @GetMapping()
-    public Phonebook get(@RequestParam(value = "id") String id) {
+    @GetMapping("/{id}")
+    public Phonebook get(@PathVariable(value = "id") String id) {
         return get.get(Integer.parseInt(id));
     }
 
@@ -50,8 +50,8 @@ public class PhonebookController {
         return edit.edit(Integer.parseInt(id), input);
     }
 
-    @DeleteMapping()
-    public boolean delete(@RequestParam(value = "id") String id) {
+    @DeleteMapping("/{id}")
+    public boolean delete(@PathVariable(value = "id") String id) {
         return delete.delete(Integer.parseInt(id));
     }
 }

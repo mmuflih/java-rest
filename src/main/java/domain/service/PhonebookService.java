@@ -50,7 +50,7 @@ public class PhonebookService implements PhonebookRepository {
 
     @Override
     public Phonebook find(int id) {
-        String query = "SELECT * FROM phonebooks WHERE id = ?";
+        String query = "SELECT * FROM phonebooks WHERE id = " + id;
         try {
             PreparedStatement st = conn.prepareStatement(query);
             ResultSet rs = st.executeQuery(query);
@@ -84,10 +84,9 @@ public class PhonebookService implements PhonebookRepository {
 
     @Override
     public boolean delete(int id) {
-        String query = "DELETE FROM phonebooks WHERE id = ?";
+        String query = "DELETE FROM phonebooks WHERE id = " + id;
         try {
             PreparedStatement ps = conn.prepareStatement(query);
-            ps.setInt(1, id);
             return ps.execute();
         } catch (SQLException e) {
             e.printStackTrace();
